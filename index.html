@@ -8,12 +8,30 @@
 </head>
 
 <body>
-    <h1>What's On Your Mind?</h1>
-    <h2>Username</h2>
-    <input type="text" class="form-input w-100" id="user-name" name="user-name"/>
-    <h2>Title</h2>
-    <input type="text" class="form-input w-100" id="title" name="title"/>
-    <h2>Content</h2>
-    <input type="text" class="form-input w-100" id="content" name="content"/>
-    <button>Submit</button>
+    <header>
+        <h1>What's On Your Mind?</h1>
+        <button id="toggle-button">Toggle</button>
+    </header>
+    <div id="main">
+        <div id="left-column">
+            <div id="circle">
+                <h1>My First Blog</h1>
+            </div>
+        </div>
+        <div id="right-column">
+            <form>
+                <h2>Username</h2>
+                <input type="text" class="form-input w-100" id="user-name" name="user-name" />
+                <h2>Title</h2>
+                <input type="text" class="form-input w-100" id="title" name="title" />
+                <h2>Content</h2>
+                <input type="text" class="form-input w-100" id="content" name="content" />
+            </form>
+            <a href="./blog.html">
+                <button>Submit</button>
+            </a>
+        </div>
+    </div>
 </body>
+
+</html>
