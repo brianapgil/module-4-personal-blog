@@ -13,14 +13,14 @@ function saveBlogSubmission() {
     }
 
     if (!blogSubmission.username || !blogSubmission.title || !blogSubmission.content){
-        //alert("Please fill out form.");
+        alert("Please fill out form.");
         console.log("hello");
     }
-    console.log(blogSubmission.username);
-    console.log(blogSubmission.title);
-    console.log(blogSubmission.content);
+    else {
+        window.location.href = "blog.html"
+    }
 
-    //localStorage.setItem('blogSubmission',JSON.stringify(blogsSubmission));
+    localStorage.setItem('blogSubmission',JSON.stringify(blogSubmission));
 }
 
 submitButton.addEventListener('click', saveBlogSubmission);

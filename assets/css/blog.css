@@ -1,13 +1,4 @@
-#main {
-    display: flex;
-    justify-content: space-evenly;
-    height: 100vh;
-}
-
-header {
-    border-bottom: 2px solid black;
-    margin-bottom: 2px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+section {
+    border: solid 3px black;
+    padding: 20px;
 }
