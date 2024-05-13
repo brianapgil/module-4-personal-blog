@@ -1,4 +1,4 @@
-let testButton = document.getElementById('test')
+const sectionEl = document.querySelector('section');
 
 function getLocalStorage() {
     const blogPost = localStorage.getItem('blogSubmission');
@@ -7,16 +7,36 @@ function getLocalStorage() {
     return data || [];
 }
 
-function createBlog() {
+const buildElement = function (type, text, parent) {
+  const tag = document.createElement(type);
+  tag.textContent = text;
+  parent.appendChild(tag);
+  return tag;
+};
+
+const renderBlogList = function () {
   const blogs = getLocalStorage();
-  console.log(blogs);
-  const newArticle = $("<article></article>");
-  const newH2 = $("<h2>");
-  const newBlockQuote = $("<blockquote>");
-  const newPTag = $("<p>");
+  
+  for (let blog of blogs) {
+    const article = buildElement('article', null, sectionEl);
+    buildElement('h2', blog.title, article);
+    buildElement('blockquote', blog.content, article);
+    buildElement('p', `Posted by: ${blog.username}`, article);
+  }
+};
 
-  newArticle.append("hello");
+//testButton.addEventListener('click', createBlog)
 
-}
 
-testButton.addEventListener('click', createBlog)
+renderBlogList();
+
+
+
+
+
+
+
+
+
+
+
