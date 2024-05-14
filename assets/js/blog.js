@@ -1,13 +1,12 @@
 const sectionEl = document.querySelector('section');
 
 function getLocalStorage() {
-    const blogPost = localStorage.getItem('blogSubmission');
+    const blogPost = localStorage.getItem('blogSubmissions');
     if (!blogPost) {
-      console.log("no data in local sorage")
+      console.log("no data in local storage")
       return [];
     }
     let data = JSON.parse(blogPost);
-    console.log(data, "test");
     return data 
 
 }
@@ -24,9 +23,6 @@ const renderBlogList = function () {
   if(blogs.length === 0){
     console.log("no blogs to display");
   }
-  console.log(blogs.length, "blogslength");
-  console.log(blogs, "TEST1");
-  console.log(blogs.title, "TEST2");
   for (let blog of blogs) {
     if (!blog.title || !blog.content || !blog.username) {
       console.error("missing properties in blog", blog);
