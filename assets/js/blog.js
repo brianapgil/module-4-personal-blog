@@ -1,4 +1,5 @@
 const sectionEl = document.querySelector('section');
+const backButton = document.querySelector('#back-button');
 
 function getLocalStorage() {
     const blogPost = localStorage.getItem('blogSubmissions');
@@ -35,10 +36,14 @@ const renderBlogList = function () {
   }
 };
 
-//testButton.addEventListener('click', createBlog)
+function goBack() {
+  window.location.href = "index.html";
+}
 
 getLocalStorage();
 renderBlogList();
+
+backButton.addEventListener('click', goBack);
 
 
 

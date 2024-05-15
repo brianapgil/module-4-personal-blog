@@ -1,10 +1,13 @@
-const backButton = document.querySelector('#back-button');
-const toggleButton = document.querySelectorAll('.toggle');
+const toggleButton = document.querySelector('#toggle-button');
 
-function goBack() {
-    window.location.href = "index.html";
-}
+function darkModeToggle() {
+    var element = document.body;
+    if (element.classList.contains("dark-mode")) {
+        element.classList.remove("dark-mode"); 
+    }
+    else {
+        element.classList.add("dark-mode");
+    }
+  }
 
-
-
-backButton.addEventListener('click', goBack)
+toggleButton.addEventListener('click', darkModeToggle);
